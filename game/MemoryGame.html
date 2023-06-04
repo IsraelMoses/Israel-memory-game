@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/game/MemoryGame.css">
+    <meta charset="UTF-8">
+    <script src="/game/MemoryGame.js"></script>
+
+    <title>Memory Game</title>
+</head>
+
+<body onload="shuffle()"> 
+    
+<button id ="button" onclick="reload()"style="display: block; margin: auto; margin-top:30px; margin-bottom:30px;">Restart Game</button>
+<form action="http://127.0.0.1:8081/do_game" method = "GET">
+    <!-- res.sendFile( __dirname + "/table/" + "table.html" ); -->
+    
+        <input type = "submit" id="button2" value = "Back">
+            <section class="memory-game" id="section-of-cards" ></section>
+
+        </form>
+</body>
+<script>
+    var serverRows = "%%ROWS_KEY%%";
+    var serverCols = "%%COLS_KEY%%";
+</script>
+
+</html>
+
